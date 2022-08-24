@@ -1,0 +1,197 @@
+/* Oldalak háttérképének beállítása */
+
+    body {
+        background-image:       url(./images/bg.jpg);
+        background-attachment:  fixed;
+        background-size:        cover;
+        background-repeat:      no-repeat;
+        background-position:    20% 50%;
+    }
+
+
+/* Navigáció testreszabása */
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+        font-weight:    bolder;
+        letter-spacing: 1.5px;
+        padding-right:  20px;
+        padding-left:   20px;
+    }
+
+    .navbar-dark .navbar-brand:hover {
+        font-weight:    bolder;
+        letter-spacing: 1.5px;
+    }
+
+    .navbar-dark .navbar-toggler {
+        border-color: rgba(255,193,7,.1);
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 193, 7, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-dark .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 1);
+    }
+
+/* Saját osztály a dobozok egyedi háttérszínének */
+
+    .yellow-light {
+        background-color: #ffda6a;
+    }
+
+
+/* Főoldalon lévő átlátszó fekete hátterű doboz színeinek beállítása */
+
+    #main_content {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #main_content .btn:hover {
+        box-shadow: 0 0 1rem rgba(255, 193, 7, 1);
+    }
+
+
+/* Szolgáltatások lapon a lenyíló menüpontok */
+
+    .accordion-button:focus {
+        border-color:       #1a1e21;
+        box-shadow:         0 0 0 .25rem rgba(255, 193, 7, 1);
+    }
+
+    .accordion-button:not(.collapsed) {
+        color:              #1a1e21;
+        background-color:   #ffda6a;
+    }
+
+
+/* Kapcsolat lapon az űrlaphoz írt módosítások */
+
+    .form-control:focus {
+        border-color:   #ffc107;
+        box-shadow:     0 0 0 .25rem rgba(255, 193, 7, 1);
+    }
+
+    .btn-check:focus+.btn-dark, .btn-dark:focus {
+        border-color:   #1a1e21;
+        box-shadow:     0 0 0 .25rem rgba(255, 193, 7, 1);
+    }
+
+    .btn-check:active+.btn-dark:focus, .btn-check:checked+.btn-dark:focus, .btn-dark.active:focus, .btn-dark:active:focus, .show>.btn-dark.dropdown-toggle:focus {
+        box-shadow:     0 0 0 .25rem rgba(255, 193, 7, 1);
+        font-weight:    bold;
+    }
+
+
+/* Kapcsolat lapon lévő térképrészlet szélessége, magassága */
+
+    #GMFrame {
+        width:  100%;
+        height: 500px;
+    }
+
+
+/* Főoldalon lévő átlátszó fekete hátterű doboz méretezéséhez szükséges media query-k */
+
+    @media screen and (min-width: 300px) {
+        #main_content {
+            width:  90vw;
+            height: 50vh;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        #main_content {
+            width:  80vw;
+            height: 60vh;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        #main_content {
+            width:  60vw;
+            height: 60vh;
+        }
+    }
+
+
+
+/* Leadás utáni módosítások */
+
+    /* Az animáció lefutása közben ne jelenjenek meg a gördítős sávok */
+        .hidden-overflow body {
+            overflow: hidden;
+        }
+
+    
+    /* A cégnév animálása */
+
+        .brand-name {
+            animation: 2s ease-out 0s 1 slideInFromTop;
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+        }
+
+
+    /* A Szolgáltatások gomb animálása */
+
+        .services-btn {
+            animation: 2s ease-out 0s 1 slideInFromLeft;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(calc(-1 * 100vw / 2 - 86px));
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+        }
+
+
+    /* A Kapcsolat gomb animálása */
+
+        .contact-btn {
+            animation: 2s ease-out 0s 1 slideInFromRight;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(calc(100vw / 2 + 62.5px));
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+        }

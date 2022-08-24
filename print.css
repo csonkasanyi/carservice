@@ -1,0 +1,125 @@
+/* Általános beállítások */
+
+    .navbar-toggler, .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-brand {
+        color:              black;
+        text-decoration:    none;
+        font-size:          26px;
+        display:            block;
+        margin-top:         20px;
+    }
+
+    .bi-house-door {
+        display: none;
+    }
+
+    h1, h3 {
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+
+/* Főoldal */
+
+    #main_content {
+        text-align:     center;
+        border:         1px dashed black;
+        border-radius:  6px;
+        width:          400px;
+        margin:         40px auto;
+    }
+
+    #main_content a {
+        display:            block;
+        color:              black;
+        text-decoration:    none;
+        margin-bottom:      20px;
+        font-size:          20px;
+        font-weight:        bold;
+    }
+
+
+/* Szolgáltatások */
+
+    .accordion button, h2, h5 {
+        border:         none;
+        color:          black;
+        font-weight:    bold;
+        font-family:    serif;
+        font-size:      16px;
+        padding-left:   0;
+        padding-top:    15px;
+        padding-bottom: 5px;
+        margin:         0;
+    }
+
+    .accordion .accordion-collapse .accordion-body, .accordion .card-text {
+        font-size:  14px;
+        margin:     0;
+        padding:    0;
+        text-align: justify;
+    }
+
+    .accordion .card-img-top {
+        display: none;
+    }
+
+    .accordion .card-text {
+        padding-bottom: 15px;
+    }
+
+
+/* Bemutatkozás */
+
+    .site-content {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+
+/* Kapcsolat */
+
+    .form-container, .contact-title {
+        display: none;
+    }
+
+    .contacts {
+        width:          446px;
+        border:         1px dashed gray;
+        border-radius:  6px;
+        font-size:      20px;
+        padding:        24px;
+        margin:         20px auto;
+    }
+
+    .contacts h3 {
+        margin:     0;
+        padding:    0;
+    }
+
+    .contacts a {
+        text-decoration:    none;
+        color:              black;
+    }
+
+    .contacts i {
+        padding-right: 10px;
+    }
+
+    #GMFrame {
+        width:      500px;
+        height:     350px;
+        border:     none;
+        display:    block;
+        margin:     0 auto;
+    }
